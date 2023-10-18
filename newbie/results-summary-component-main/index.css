@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+:root {
+  --color-primary-red: hsl(0, 100%, 67%);
+  --color-primary-yellow: hsl(39, 100%, 56%);
+  --color-primary-teal: hsl(166, 100%, 37%);
+  --color-primary-blue: hsl(234, 85%, 45%);
+
+  --color-bggradient-slate: hsl(252, 100%, 67%);
+  --color-bggradient-royal: hsl(241, 81%, 54%);
+
+
+  --color-bggradient-violet: hsla(256, 72%, 46%, 1);
+  --color-bggradient-persian: hsla(241, 72%, 46%, 0);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-blue: hsl(221, 100%, 96%);
+  --color-neutral-lavander: hsl(241, 100%, 89%);
+  --color-neutral-gray: hsl(224, 30%, 27%);
+}
+
+.reaction {color: var(--color-primary-red)}
+.memory {color: var(--color-primary-yellow)}
+.verbal {color: var(--color-primary-teal)}
+.visual {color: var(--color-primary-blue)}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+body main {
+  width: 768px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  box-shadow: 0px 0px 10px 1px var(--color-neutral-lavander);
+  border-radius: 2rem;
+}
+body main .result {
+  padding: 2rem 4rem;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background-image: linear-gradient(
+    var(--color-bggradient-slate),
+    var(--color-bggradient-royal)
+    );
+}
+body main .result header h1 {
+  color: var(--color-neutral-blue);
+}
+body main .result .radius {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 50%;
+  background-image: linear-gradient(var(--color-bggradient-violet), var(--color-bggradient-persian));
+}
+body main .result .radius h2 {
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+}
+body main .result .radius p {
+  color: var(--color-neutral-blue);
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+body main .result footer {
+  text-align: center;  
+}
+body main .result footer h2 {
+  font-size: 2.4rem;
+}
+body main .result footer p {
+  color: var(--color-neutral-lavander);
+}
+
+
+body main .summary {
+  max-width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  background-color: var(--color-neutral-white);
+}
+body main .summary header h1 {
+  color: var(--color-neutral-gray);
+}
+body main .summary .sec-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body main .summary article {
+  width: 250px;
+  max-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main .summary .summaries {
+  display: flex;
+  gap: 1rem;
+}
+
+body main .summary .points span {
+  color: var(--color-neutral-lavander)
+}
+body main .summary .points .point {
+  color: var(--color-neutral-gray);
+}
+
+body main .summary button {
+  width: 250px;
+  padding: 1rem;
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-gray);
+  border: none;
+  border-radius: 2remteal;
+}
+
+@media (max-width: 425px) {
+  body main {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .result {
+    padding: 1rem;
+  }
+  h1 {font-size: 1rem;}
+  h2 {font-size: 1rem;}
+  h3 {font-size: 1rem;}
+  p {font-size: 1rem;}max-width: 425px;
+}
